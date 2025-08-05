@@ -11,6 +11,8 @@ Large Language Models (LLMs) offer transformative capabilities for hardware desi
 
 **Authors**: Zeng Wang, Minghao Shao, Rupesh Raj Karn, Likhitha Mankali, Jitendra Bhandari, Ramesh Karri, Ozgur Sinanoglu, Muhammad Shafique, Johann Knechtel
 
+**Contact** zw3464@nyu.edu
+
 ## SALAD
 ### Case Study Illustration
 ![Case Study](figures/salad_case_study.png)
@@ -97,4 +99,5 @@ python salad_result.py
 ```
 After that, the unlearn performance result will be saved as a file named as ```result_unlearning_{trainer}_ep{unlearn_epoch}```
 
+## Acknowledgement
 Our Unlearning implementation code is established based on the [OpenUnlearning](<https://github.com/locuslab/open-unlearning>). 
