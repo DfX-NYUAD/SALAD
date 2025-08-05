@@ -1,0 +1,10 @@
+# TODO: make it perturbed
+RTL_QA_retain_eval:
+  handler: QADataset
+  args:
+    hf_args:
+      path: "json"
+      data_files: "RTL_dataset/vericontaminated/test_retain.json"
+    question_key: "Instruction"
+    answer_key: "Response"
+    max_length: 2048

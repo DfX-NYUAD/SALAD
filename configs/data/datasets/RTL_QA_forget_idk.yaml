@@ -1,0 +1,12 @@
+RTL_QA_forget_idk:
+  handler: QAwithIdkDataset
+  args:
+    hf_args:
+      path: "json"
+      data_files: "RTL_dataset/vericontaminated/test_forget.json"
+    question_key: "Instruction"
+    answer_key: "Response"
+    max_length: 2048
+    idk_path: ./data/idk.jsonl
+    return_original: true
+    

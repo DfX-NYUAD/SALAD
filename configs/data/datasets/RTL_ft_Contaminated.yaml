@@ -1,0 +1,9 @@
+RTL_coder_leaky:
+  handler: QADataset
+  args:
+    hf_args:
+      path: "json"
+      data_files: "RTL_dataset/saved/finetune/RTL_contamination.json"
+    question_key: "Instruction"
+    answer_key: "Response"
+    max_length: 2048

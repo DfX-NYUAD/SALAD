@@ -1,0 +1,9 @@
+RTL_QA_forget_para:
+  handler: QADataset
+  args:
+    hf_args:
+      path: "json"
+      data_files: "RTL_dataset/vericontaminated/test_forget.json"
+    question_key: "Instruction"
+    answer_key: "Response"
+    max_length: 2048

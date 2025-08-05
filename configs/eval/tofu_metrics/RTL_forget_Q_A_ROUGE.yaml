@@ -1,0 +1,31 @@
+# @package eval.tofu.metrics.forget_Q_A_ROUGE
+defaults:
+  - ../../data/datasets@datasets: RTL_QA_forget
+  - ../../collator@collators: DataCollatorForSupervisedDatasetwithIndex
+  - ../../generation@generation_args: default
+  
+  # ^ get default dataset and generation config information
+
+handler: rouge
+rouge_type: rougeL_recall
+batch_size: 4
+
+datasets: # override as needed
+  RTL_QA_forget:
+    args:
+      hf_args:
+        path: "json"
+        data_files: "RTL_dataset/vericontaminated/test_forget.json"
+      predict_with_generate: True
+
+collators:
+  DataCollatorForSupervisedDataset: 
+    args:
+      padding_side: left
+
+generation_args:
+  do_sample: true
+  top_p: 0.95
+  temperature: 0.8
+  max_new_tokens: 1024
+  use_cache: true

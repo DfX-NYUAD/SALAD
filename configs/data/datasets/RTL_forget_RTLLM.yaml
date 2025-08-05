@@ -1,0 +1,9 @@
+RTLLM:
+  handler: QADataset
+  args:
+    hf_args:
+      path: "json"
+      data_files: "RTL_dataset/rtllm.json"
+    question_key: "prompt"
+    answer_key: "ref"
+    max_length: 512
